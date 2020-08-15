@@ -1,0 +1,197 @@
+<html>
+
+<head>
+	
+<title>QUERY PAGE</title>
+
+<script>
+
+function Query()                                   
+ 
+{ 
+    
+var name = document.forms["QueryForm"]["text1"];
+   
+ var gender= document.forms["QueryForm"]["gender"];                  
+   
+ var email = document.forms["QueryForm"]["text2"];    
+   
+ var mobile = document.forms["QueryForm"]["text3"];   
+   
+ var address = document.forms["QueryForm"]["text4"]; 
+   
+ var city= document.forms["QueryForm"]["text5"];  
+    
+var pincode= document.forms["QueryForm"]["text6"]; 
+   
+ var state = document.forms["QueryForm"]["text7"]; 
+    
+var query= document.forms["QueryForm"]["text9"]; 
+   
+   
+ if (name.value == "")                                  
+    
+{ 
+        
+window.alert("Please enter your name."); 
+       
+ name.focus(); 
+       
+ return false; 
+    
+} 
+
+
+    
+if (email.value == "")                                   
+
+    { 
+       
+ window.alert("Please enter a valid e-mail address."); 
+        
+email.focus(); 
+       
+ return false; 
+   
+ } 
+   
+    
+if (mobile.value == "")                           
+   
+ { 
+       
+ window.alert("Please enter your mobile number."); 
+     
+   mobile.focus(); 
+       
+ return false; 
+    
+} 
+   
+
+   
+ if (address.value == "")                               
+ 
+   { 
+        
+window.alert("Please enter your Street (name/number),locality name etc."); 
+        
+address.focus(); 
+        
+return false; 
+   
+ } 
+     
+if (city.value == "")                           
+   
+ { 
+       
+ window.alert("Please enter your City/District name."); 
+        
+city.focus(); 
+        
+return false; 
+    
+} 
+   
+     
+if (pincode.value == "")                           
+
+    { 
+       
+ window.alert("Please enter your Pincode/Zipcode."); 
+     
+   pincode.focus(); 
+      
+  return false; 
+   
+ } 
+   
+ if (state.value == "")                        
+   
+    { 
+       
+ window.alert("Please enter your State name."); 
+ state.focus(); 
+       
+ return false; 
+   
+ } 
+   
+   
+ if (query.value == "")                        
+
+    { 
+        
+window.alert("Please enter your Query/Complaint."); 
+        
+query.focus(); 
+return false; 
+} 
+   
+   
+ return true; 
+
+}
+
+</script> 
+ 
+  
+</head>
+<body bgcolor="white">
+
+<form name="QueryForm" align="left" onsubmit="return Query()">
+	
+<fieldset abled>
+	
+<legend><p><b><h1>QUERY FORM</h1></b></p></legend>
+Name :<font color="red">*</font><br>
+<input type="text" name="text1" >
+<br>
+Gender :<font color="red">*</font> <br> 
+
+<input type="radio" name="gender" id="male">Male
+<input type="radio" name="gender" id="female">Female
+<br>
+Email-Id :<font color="red">*</font><br><input type="text" name="text2" id="t1"  >
+<br>
+Mobile Number :<font color="red">*</font>
+<br><input type="text" name="text3" id="t1"  >
+<br>
+Address :<font color="red">*</font><br>
+<input type="text" name="text4" id="t1">
+<br>
+City/District :<font color="red">*</font>
+<br><input type="text" id="t1" name="text5">
+<br>
+Pincode :<font color="red">*</font>
+<br><input type="digit" id="d1" name="text6">
+<br>
+State :<font color="red">*</font>
+<br><input type="text" id ="t1" name="text7">
+<br>
+Country :<br><input type="text" value="India" id="t1" name="text8">
+<br>
+Query:<font color="red">*</font>
+<br>
+<textarea input type="text" rows="5" cols="50" placeholder="Enter your query here..." name="text9"></textarea>
+<br>
+<p align="left">Or, Attach the document regarding Query</p>
+<br>
+<label for="fileselect">Upload Document :</label> 
+
+ <input type="file" name="upload" id="fileselect">
+ <br><br>
+<input type="submit" value="Submit Query">
+ 
+<input type="reset" value="Reset">
+<p><b><i><font color="red" size="3"> 
+!!! '*' Represents the mandatory field which is to be filled !!!</font> </i>
+</b></p>
+
+</form>
+
+</body>
+
+</html>
+
