@@ -1,0 +1,28 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int res[]=maximumsumsubarray(5,new int[]{8,7,7,5,3,5,7,8});
+		for(int i=0;i<4;i++)
+		System.out.print(res[i]+" ");
+	}
+public static int[] maximumsumsubarray(int k, int arr[])
+{   int res[]=new int[arr.length-k+1];
+    int windowstart=0;int windowend;
+    int sum=0,maxsum=0;
+    for(windowend=0;windowend<arr.length;windowend++)
+    {
+       sum+=arr[windowend];
+       
+        if(windowend>=k-1)
+        {
+           if(sum>maxsum)
+           maxsum=sum;
+           res[windowstart]=sum;
+           sum=sum-arr[windowstart];
+           windowstart++;
+        }
+    }
+    System.out.println(maxsum);
+    return res;
+ }
+}
