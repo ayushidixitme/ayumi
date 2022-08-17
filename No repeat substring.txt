@@ -1,0 +1,35 @@
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    System.out.println ("Hello World");
+  }
+  public static int findlength (char[]arr)
+  {
+    Map < character, integer > charlength = new HashMap <> ();
+    int we, ws = 0, minlen;
+    string res = "";
+    for (we = 0; we <= arr.length; we++)
+      {
+	char ch = arr[we];
+	if (findlength.containsKey (ch) == false)
+	  {
+	    res =(minlen<we-ws+1)? res + ch:res;
+	    charlength.put (ch, 1);
+	    minlen = Math.max (minlen, we - ws + 1);
+	  }
+	while (findlength.containsKey (ch) == true)
+	  {
+	    ws = we;
+          charlength.clear();
+          charlength.put(ch,1);
+          res="";res+=ch;
+	  }
+
+      }
+       System.out.print(res+" ");
+       return minlen;
+  }
+}
